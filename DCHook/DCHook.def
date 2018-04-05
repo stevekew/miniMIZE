@@ -1,0 +1,4 @@
+LIBRARY	miniMIZE
+EXPORTS
+	setMyHook
+	clearMyHook

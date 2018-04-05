@@ -1,0 +1,42 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(D9FF2B17-513A-4C7C-96FE-80A6C989BADB),
+	dual,
+	nonextensible,
+	helpstring("IDebugWindow Interface"),
+	pointer_default(unique)
+]
+interface IDebugWindow : IDispatch{
+};
+[
+	object,
+	uuid(BFB32FC1-1289-4DE0-884D-E9232CE11596),
+	dual,
+	nonextensible,
+	helpstring("IDeskconWindow Interface"),
+	pointer_default(unique)
+]
+interface IDeskconWindow : IDispatch{
+};
+library DummyLib
+{
+	[
+		uuid(F4DF98F3-8AEE-4B27-851F-E10DEB46A10A),
+		helpstring("DebugWindow Class")
+	]
+	coclass DebugWindow
+	{
+		[default] interface IDebugWindow;
+	};
+	[
+		uuid(4AB7DA21-0FB3-44D1-9985-13326CC4583A),
+		helpstring("DeskconWindow Class")
+	]
+	coclass DeskconWindow
+	{
+		[default] interface IDeskconWindow;
+	};
+};

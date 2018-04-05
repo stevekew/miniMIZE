@@ -1,0 +1,231 @@
+Deskcon To-do / Buglist
+----------------------
+
+Bugs
+----
+- Win+M hides windows without showing deskcons
+- Win+D hides windows without showing deskcons
+- Some messages are still lost. e.g. New firefox, minimized via taskbar
+- GTK windows don't preview correctly
+- Thumbnails don't check for other windows being positioned in their place
+- Flash doesn't work with alternate shells
+
+No longer an issue
+------------------
+- Sometimes the taskbar buttons remain
+- Sometimes the deskcons disappear
+
+To-do
+-----
+- Add localising
+- Smarter positioning (put thumbnails where window was if not maximised)
+   - margins
+   - cascading
+   - horizontal, vertical, random
+- Flash modes
+- Container Windows (Tychoquad)
+- Snapshot all already minimized windows on startup (Matrice)
+- Thumbnails for all windows not just minimized (kez)
+- minimize animation
+- png's instead of thumbnails
+- Text under thumbnails
+- Mouseover
+
+Changelog
+---------
+
+1.0.1.0
++ Added tooltips to Deskcon windows
++ Added System menus to the Deskcon windows on right click
++ Added code to determine where to place the Deskcon windows first time.
+o Windows are hidden on maximize/ restore, instead of being closed and recreated 
+	this allows them to remember where they were before.
++ Added version numbers
+
+1.0.10
+o Changed the hook to WH_CBT (thanks andrew)
+o Re-created the thumbnail class to fix a bug with the new hook and moving the windows
+o Changed the take thumbnail code to try get the active pop-up (fixes VS.net)
+o Changed the take thumbnail code to use bitblt if too much black on thumbnail (thanks andrew)
+
+1.0.11
+o Fixed Firefox windows draw funny if you move a window over them - because of multiple 
+	minimize messages for the same window (thanks mahen)
+o Fixed when a window is minimized, then restored, has it's dimensions changed then 
+	minimized again, we get the dimensions of the deskcon wrong
+
+1.0.15
+o Fixed Delphi application support
+o Added class to allow polling if wanted
+
+1.0.16	
+o Fixed a bug that prevented the scanning of windows for incorrect drawing
+
+1.0.17
++ Added basic implementation for flashing windows
+o Tidied the window capture code
+o Fixed catching new Firefox window messages (codenamed Deer Park)
++ Implemented the commands within the system menus for the deskcons
+
+1.0.18
+o Basic code clean up. Moved the main window to a seperate class	
+
+1.0.19
++ Updated the about box to get the actual version number
+o Fixed the notify icon after moving its creation to the new window
+o Delete tooltips when the deskcons are destroyed
+o Removed unnecessary resources from the resource file
+o Changed the menu code to make it get the return from the TrackPopupEx fn rather than as a message
+
+1.0.20
+o Added an opacity menu with ctrl+r-click on the deskcon -> set the deskcon opacity
+
+1.0.21
+o Fixed the always on bottom style
++ Added manifest file for XP styles on the settings dialog
++ Implemented Autostart
++ Implemented Settings dialog
++ Implemented settings on start and change
+
+1.0.22
++ Implemented setting to allow windows to be set to show on a particular montior
++ Implemented always on top, always on bottom and normal
++ Implemented set global deskcon level from tray menu
+o Fixed opacity matching between the settings control and the deskcon menu
+o Fixed a bug that caused a deskcon to resize incorrectly if the width was not 100
+o Fixed a bug in the settings code that didn't create the settings key if it didn't exist
+o Fixed a bug in the settings code that wrote default strings incorrectly
+o Implemented a fix to hopefully fix the problem with dock's that also watch for minimized windows
+
+1.0.23
+o Fixed the window level so that the current level shows in the thumbnail context menu
+o Name changed to miniMIZE
++ Added Flash Color setting
++ Added code to change the flash color
++ Added initial miniMIZE icon
++ Added Smart Sizing
+
+1.0.24
+o Fixed a shutdown bug. Allows the installer to shutdown miniMIZE with a window message
+o Changed the icon again
+
+1.0.25
+o Fixed a bug that stopped the first DWORD setting from not being read correctly
+o Changed the setting dialog to use Tab control
+o Moved settings onto tabs
++ Added thanks to about dialog
++ Added ability to hide the notification icon
++ Added ability to ensure only one instance of miniMIZE is running
++ Added ability to temporarily re-show the notifyicon on re-running miniMIZE
+o Fixed a divide by zero bug when minimizing PSP
+o Fixed a bug that caused Photoshop to minmize a tool window instead of the main window
+o Fixed the version information from Deskcon to miniMIZE
+
+1.0.26
+o Changed the drawing code to use UpdateLayeredWindow to provide transparency
++ Implemented new shadow drawing
++ Added default window level
+o Changed the size mode setting controls to a combo box
+
+1.0.27
++ Added single click restore
++ Added ctrl-drag for double click mode
+o Fixed a bug that stopped double click restoring when set to ctrl-drag
+o Fixed a bug that sometimes got the wrong icon (Java)
+o Fixed a bug introduced with the new drawing method that stopped flashing from working
++ Added hotkey settings to the settings dialog. Allows user to set hotkeys
++ Added hotkeys for cycling window level, miniMIZE'ing all windows, and showing/ hiding the windows
+
+1.0.28
++ Added show settings dialog when double clicking the notification icon
++ Added greyscale icon to show when the hook is not installed
++ Added switch for custom shadows to turn them off - seem to cause issues with some video cards
+o Fixed a bug that got the alt and shift hotkeys confused
+
+1.0.29
+- Removed the setting for custom shadows. It is a compatability setting, so it is hidden
++ Added centre the settings dialog on the screen when it is shown
+o Fixed a bug that allowed multiple settings dialogs to be shown
++ Added exclusion list and editor
++ Added an exclusion hotkey. Hold the hotkey and minimize a window to add the window to the exclusion list.
+o Center the about box
+
+1.0.30
+o Changed the debug menu to use shift instead of alt
++ Added debug registry setting to show the debug window on startup
++ Added regular expression exclusions
+o Fixed a bug that made size changes only occur on the second minimize
+o Fixed a bug that loaded ctrl drag for thumbnails as default
++ Added ability to turn off (default) a hotkey to minimize -> add window to the exclusion list
+
+1.0.31
++ Added ability to update exclusion nodes
+o Fixed a bug where the settings dialog could get hidden behind other windows
++ Added branding
+
+1.0.32
++ Added hide taskbar buttons
++ Added hide taskbar button setting option on the setting dialog
+o Fixed a bug that stopped windows that were already miniMIZEd from being excluded
+
+1.0.33
+o Fixed a bug that caused minimized windows with their taskbar buttons hidden to reshow their taskbar buttons
+o Fixed a bug that stopped taskbar buttons for delphi apps from being hidden
+o Fixed a bug that stopped taskbar buttons for trillian windows from being hidden
+o Fixed a bug that miniMIZEd the command window on minimize all hotkey
++ Added a feature to re-show all hidden taskbar buttons on exit
+
+1.0.34
++ Added a splash window
++ Added help files to the install
+o Changed all strings to a consistant format. Allows for Unicode if needed
++ Added bmpbar to the About Box
+
+1.0.35
++ Added restore all windows on startup
+o Stopped setting the window level for all thumbnails when you change the default window level setting
++ Added help to the context menu
++ Added basic customizable positioning
+
+1.0.36
+o Fixed the window level of the thumbnail after restoring the window and re-miniMIZEing
++ Added a timer to clean up after crashed applications
+- Removed code that unhooked on DLL_DETATCH of the hook (hope this will help some people)
+
+1.0.37
+o Fixed the fact that the notify icon didn't re-show when explorer crashed
+o Fixed a bug where when explorer crashes, the thumbnail windows that have been set to always
+   on bottom get killed
+   
+1.0.38
+o Fixed a bug that fixed the thumbnail maximum size at 200
++ Added snap-to for the thumbnails
+o Fixed a bug that caused 100% CPU when a tooltip from the tray touched a thumbnail
+
+Releases
+--------
+First Release 1.0.1.0
+2005-08-18 build 1.0.10
+2005-08-18 build 1.0.11
+2005-08-19 build 1.0.15
+2005-08-19 build 1.0.16
+2005-08-22 build 1.0.17
+2005-08-22 build 1.0.18
+2005-08-23 build 1.0.19
+2005-08-23 build 1.0.20
+2005-08-26 build 1.0.22
+2005-09-02 build 1.0.23
+2005-09-02 build 1.0.24 (Public Beta 1)
+2005-09-12 build 1.0.25
+2005-09-   build 1.0.26
+2005-09-20 build 1.0.27
+2005-09-20 build 1.0.28
+2005-09-27 build 1.0.29
+2005-10-03 build 1.0.30
+2005-10-10 build 1.0.31
+2005-10-11 build 1.0.32
+2005-10-15 build 1.0.33
+2005-11-07 build 1.0.34 (Public Beta 2)
+2006-01-06 build 1.0.35
+2006-01-24 build 1.0.36
+2006-01-25 build 1.0.37 (Pubilc Beta 3)

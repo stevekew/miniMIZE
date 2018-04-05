@@ -1,0 +1,4 @@
+LIBRARY	"mmHook"
+EXPORTS
+	setMyHook
+	clearMyHook

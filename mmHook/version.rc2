@@ -1,0 +1,50 @@
+//
+// RCTest.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+#include "..\version.h"
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION VERSION_NUMERIC
+ PRODUCTVERSION VERSION_NUMERIC
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "1c0904b0"
+        BEGIN
+	    VALUE "CompanyName", VERSION_COMPANY
+            VALUE "FileDescription", "miniMIZE Hook"
+            VALUE "FileVersion", VERSION_STRING
+            VALUE "LegalCopyright", VERSION_COPYRIGHT
+            VALUE "OriginalFilename", "mmHook.dll"
+            VALUE "ProductName", VERSION_PRODUCT
+            VALUE "ProductVersion", VERSION_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x1c09, 1200
+    END
+END

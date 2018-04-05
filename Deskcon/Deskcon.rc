@@ -1,0 +1,367 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""version.rc2""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "Deskcon"
+    IDC_DESKCON             "DESKCON"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (South Africa) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENS)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_SOUTH_AFRICA
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTDESKCON DIALOGEX 0, 0, 186, 209
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "About miniMIZE..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,66,192,50,14
+    LTEXT           "0.0.0.1",IDC_VERSIONSTRING,41,38,55,8
+    LTEXT           "Copyright (c) 2005 Stephen Kew (illumination)",
+                    IDC_COPYRIGHT,7,51,154,8
+    LTEXT           "Version:",IDC_APPNAME,7,38,27,8
+    LTEXT           "All Rights Reserved.",IDC_STATIC,7,65,69,8
+    LTEXT           "http://aquaria.za.net",IDC_STATIC,7,82,70,8
+    GROUPBOX        "Thanks",IDC_STATIC,7,98,172,92
+    LTEXT           "Celeste Kew, Andreas Verhoeven, Andrew Kew, Andrew Powell, [BOT]FLUFFY, Geoffrey Elliot, Kester Dobson, RaduKing, Skuggs, TychoQuad",
+                    IDC_STATIC,27,130,123,40
+    LTEXT           "Thanks to the following people for their help during the development of miniMIZE:",
+                    IDC_STATIC,16,109,155,19
+    LTEXT           "Artwork by Skuggs: skuggs@gmail.com",IDC_STATIC,15,177,
+                    126,8
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 307, 241
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "miniMIZE Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,128,224,50,14
+    CONTROL         "",IDC_SETTINGSTAB,"SysTabControl32",0x0,7,7,292,215
+END
+
+IDD_GENERALSETTINGS DIALOGEX 0, 0, 288, 199
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Start miniMIZE When I Log-in",IDC_AUTOSTART,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,61,18,109,10
+    LTEXT           "Place Thumbnails On:",IDC_STATIC,60,81,69,8
+    COMBOBOX        IDC_MONITORLIST,140,81,87,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Show Icon In Tray",IDC_SHOWNOTIFYICON,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,61,30,75,10
+    COMBOBOX        IDC_CLICKSTYLE,140,64,87,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Restore Windows Using:",IDC_STATIC,60,66,79,8
+    CONTROL         "Only Move Thumbnails When I Hold Ctrl",IDC_CTRLDRAG,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,61,54,142,10
+    CONTROL         "Hide Taskbar Buttons",IDC_HIDETASKBAR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,61,42,84,10
+END
+
+IDD_THUMBSETTINGS DIALOGEX 0, 0, 288, 199
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Size:",IDC_STATIC,68,20,19,8
+    CONTROL         "",IDC_OPACITYSLIDER,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_BOTH | WS_TABSTOP,111,66,89,15
+    LTEXT           "Opacity:",IDC_STATIC,68,69,28,8
+    EDITTEXT        IDC_THUMBSIZE,117,18,99,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "100%",IDC_OPACITYPERCENT,197,70,20,8
+    CONTROL         "Show Application Icons On Thumbnail",IDC_SHOWICONS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,76,105,139,10
+    LTEXT           "",IDC_FLASHCOLOR,117,85,40,14,SS_NOTIFY,
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Flash Color:",IDC_STATIC,68,87,39,8
+    COMBOBOX        IDC_SIZEMODE,117,36,99,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Sizing Mode:",IDC_STATIC,68,38,41,8
+    COMBOBOX        IDC_WINDOWLEVEL,117,52,99,30,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Default Level:",IDC_STATIC,68,54,46,8
+    CONTROL         "Use Custom Drawn Shadows",IDC_CUSTOMSHADOWS,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,174,160,
+                    107,10
+    LTEXT           "NOTE: The custom shadows setting requires a re-start of miniMIZE to take effect",
+                    IDC_STATIC,183,173,91,19,NOT WS_VISIBLE | WS_DISABLED
+    CONTROL         "Snap-to Other Thumbnails",IDC_USESNAPTO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,76,121,99,10
+END
+
+IDD_EXCLUSIONSSETTINGS DIALOGEX 0, 0, 288, 199
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDI_FINDER1,IDC_FINDERICON,260,154,21,20,SS_CENTERIMAGE
+    EDITTEXT        IDC_PROCESSNAME,45,133,210,14,ES_AUTOHSCROLL
+    LTEXT           "Application:",IDC_STATIC,7,135,38,8
+    PUSHBUTTON      "...",IDC_BROWSEPROC,261,133,20,14
+    LTEXT           "To add an exclusion, either browse for an application to block a complete application or drag the finder to the caption bar of a window to block.",
+                    IDC_STATIC,7,7,274,20
+    EDITTEXT        IDC_WINDOWCLASS,45,163,210,14,ES_AUTOHSCROLL
+    LTEXT           "Window:",IDC_STATIC,7,151,29,8
+    PUSHBUTTON      "Add",IDC_ADDEXCLUSION,122,182,50,14
+    PUSHBUTTON      "Remove",IDC_REMOVEEXCLUSION,231,182,50,14,WS_DISABLED
+    CONTROL         "",IDC_EXCLUSIONLIST,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,7,27,274,104,
+                    WS_EX_LEFTSCROLLBAR
+    LTEXT           "Class:",IDC_STATIC,7,167,20,8
+    EDITTEXT        IDC_WINDOWTITLE,45,148,210,14,ES_AUTOHSCROLL
+    CONTROL         "Use Advanced Matching",IDC_USEREGEX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,186,93,10
+    PUSHBUTTON      "Update",IDC_UPDATEEXCLUSION,174,182,50,14
+END
+
+IDD_HOTKEYS DIALOGEX 0, 0, 288, 199
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_HKCYCLELEVEL,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,147,18,80,14
+    LTEXT           "Cycle Thumbnail Levels:",IDC_STATIC,59,20,77,8
+    LTEXT           "miniMIZE All Windows:",IDC_STATIC,59,36,72,8
+    CONTROL         "",IDC_HKMINIMIZE,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,147,34,80,14
+    CONTROL         "",IDC_HKSHOWHIDE,"msctls_hotkey32",WS_BORDER | 
+                    WS_TABSTOP,147,50,80,14
+    LTEXT           "Show/ Hide Thumbnails:",IDC_STATIC,59,52,77,8
+    CONTROL         "Control",IDC_HKEXCLUDECTRL,"Button",BS_AUTORADIOBUTTON,
+                    147,82,39,10
+    CONTROL         "Alt",IDC_HKEXCLUDEALT,"Button",BS_AUTORADIOBUTTON,197,
+                    68,25,10
+    CONTROL         "Shift",IDC_HKEXCLUDESHIFT,"Button",BS_AUTORADIOBUTTON,
+                    197,81,31,10
+    CONTROL         "None",IDC_HKEXCLUDENONE,"Button",BS_AUTORADIOBUTTON,147,
+                    68,33,10
+    LTEXT           "Add As Exclusion:",IDC_STATIC,59,68,58,8
+END
+
+IDD_BMPBAR DIALOGEX 0, 0, 324, 39
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_POSITIONSETTINGS DIALOGEX 0, 0, 288, 199
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SCREENPIC,"Static",SS_OWNERDRAW,65,28,166,128
+    CONTROL         "",IDC_TOPLEFTRIGHT,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT,85,32,16,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOPLEFTDOWN,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT,60,50,16,8,WS_EX_TRANSPARENT
+    CONTROL         " ",IDC_TOPRIGHTLEFT,"Button",BS_AUTORADIOBUTTON,185,32,
+                    16,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_TOPRIGHTDOWN,"Button",BS_AUTORADIOBUTTON,211,52,
+                    16,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_BOTTOMLEFTRIGHT,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT,85,140,16,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_BOTTOMRIGHTLEFT,"Button",BS_AUTORADIOBUTTON,185,
+                    140,16,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_BOTTOMRIGHTUP,"Button",BS_AUTORADIOBUTTON,211,121,
+                    16,8,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_BOTTOMLEFTUP,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFTTEXT,60,122,16,8,WS_EX_TRANSPARENT
+    LTEXT           "Placement of thumbnails will start in the corner selected and will continue in the direction of the arrow.",
+                    IDC_STATIC,36,7,215,16
+    EDITTEXT        IDC_POSMARGIN,142,160,50,14,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Margin:",IDC_STATIC,95,162,38,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTDESKCON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 238
+    END
+
+    IDD_GENERALSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 18
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_THUMBSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 18
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_EXCLUSIONSSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 196
+    END
+
+    IDD_HOTKEYS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 18
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_BMPBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 317
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 32
+    END
+
+    IDD_POSITIONSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "manifest.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_DESKCON             ICON                    "miniMIZE_Gradient.ico"
+IDI_FINDER1             ICON                    "icon1.ico"
+IDI_DESKCONSM           ICON                    "miniMIZE_Gradient_sm.ico"
+IDI_DISABLED            ICON                    "disabled.ico"
+IDI_FINDER2             ICON                    "ico00001.ico"
+IDI_PROCESS             ICON                    "process.ico"
+IDI_WINDOW              ICON                    "window.ico"
+IDI_CLASS               ICON                    "class.ico"
+IDI_ICON2               ICON                    "icon2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_FINDER              CURSOR                  "cursor1.cur"
+#endif    // English (South Africa) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "version.rc2"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
