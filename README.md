@@ -10,7 +10,7 @@ miniMIZE is now licenesed under the MIT license
 
 MIT License
 
-Copyright (c) 2006 Stephen Kew
+Copyright (c) 2018 Stephen Kew
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
